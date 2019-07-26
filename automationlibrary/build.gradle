@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.krushnakantsolanki'
 
 android {
     compileSdkVersion 28
@@ -29,29 +31,29 @@ dependencies {
 
     //implementation 'androidx.appcompat:appcompat:1.0.2'
     Map<String, String> dependencies = rootProject.ext.dependencies
-    implementation dependencies.timber
-    implementation dependencies.recyclerView
+    implementation 'com.jakewharton.timber:timber:4.6.1'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
 
     testImplementation 'junit:junit:4.12'
 //    androidTestImplementation 'androidx.test:runner:1.2.0'
     //   androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     // Testing-only dependencies
-    implementation 'androidx.test:core:' + rootProject.coreVersion
+    implementation 'androidx.test:core:1.0.0'
     //  implementation 'androidx.test.ext:junit:' + rootProject.extJUnitVersion
 
-    implementation 'androidx.test:runner:' + rootProject.runnerVersion;
+    implementation 'androidx.test:runner:1.1.0'
     //  implementation 'androidx.test:rules:' + rootProject.rulesVersion
-    implementation 'androidx.test.espresso:espresso-core:' + rootProject.espressoVersion
-    implementation 'androidx.test.espresso:espresso-web:' + rootProject.espressoVersion
-    implementation 'androidx.test.espresso:espresso-contrib:' + rootProject.espressoVersion
-    implementation 'androidx.test.espresso:espresso-intents:' + rootProject.espressoVersion
+    implementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation 'androidx.test.espresso:espresso-web:3.1.0'
+    implementation 'androidx.test.espresso:espresso-contrib:3.1.0'
+    implementation 'androidx.test.espresso:espresso-intents:3.1.0'
 
     // UiAutomator Testing
-    implementation 'androidx.test.uiautomator:uiautomator:' + rootProject.uiautomatorVersion
-    implementation 'androidx.test.espresso:espresso-idling-resource:' + rootProject.idlingResource
+    implementation 'androidx.test.uiautomator:uiautomator:2.2.0'
+    implementation 'androidx.test.espresso:espresso-idling-resource:3.1.1'
     //  api 'com.google.guava:guava:27.1-android'
-    implementation 'org.jsoup:jsoup:' + rootProject.jsoupVersion
+    implementation 'org.jsoup:jsoup:1.11.3'
 
     implementation 'com.sun.mail:android-mail:1.6.2'
     implementation 'com.sun.mail:android-activation:1.6.2'
