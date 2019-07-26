@@ -1,0 +1,106 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    ext {
+        lintAbortOnError = false
+
+        androidXLibraryVersion = '1.0.0'
+        retrofitVersion = '2.4.0'
+        retrofitConvertorVersion = '2.4.0'
+        retrofitConvertorVersionxml='2.3.0'
+        okhttpVersion = '3.11.0'
+        rxandroidVersion = '2.1.0'
+        rxJavaVersion = '2.2.1'
+        rxBindingVersion = '2.1.1'
+
+        daggerVersion = '2.16'
+        butterknifeVersion = '10.1.0'
+        parcelerApiVersion = '1.1.12'
+
+        glideVersion = '4.8.0'
+        mockitoVersion = '2.+'
+        powerMockVersion = '1.7.4'
+
+        espressoVersion = "3.1.0"
+        runnerVersion = "1.1.0"
+        extJUnitVersion = "1.0.0"
+        rulesVersion = "1.1.0"
+        coreVersion = "1.0.0"
+        idlingResource="3.1.1"
+        uiautomatorVersion = "2.2.0"
+
+//        PUBLISH_GROUP_ID = 'com.highq.highqdrive'
+//        PUBLISH_ARTIFACT_ID = 'android-highqdrive'
+//        PUBLISH_VERSION = '1.2'
+//        versionCode=versionNumber
+        jsoupVersion="1.11.3"
+        //  espressoVersion = '2.2.2'
+
+
+        dependencies = [
+
+                recyclerView               : "androidx.recyclerview:recyclerview:$androidXLibraryVersion",
+                designSupport              : "com.google.android.material:material:$androidXLibraryVersion",
+                support                    : "androidx.legacy:legacy-support-v4:$androidXLibraryVersion",
+                support13                  : "androidx.legacy:legacy-support-v13:$androidXLibraryVersion",
+                annotations                : "androidx.annotation:annotation:$androidXLibraryVersion",
+
+                retrofit                   : "com.squareup.retrofit2:retrofit:$retrofitVersion",
+                retrofitConverterGson      : "com.squareup.retrofit2:converter-gson:$retrofitConvertorVersion",
+                retrofitConverterXml       : "com.squareup.retrofit2:converter-simplexml:$retrofitConvertorVersionxml",
+                retrofitAdapterRxJava      : "com.squareup.retrofit2:adapter-rxjava2:$retrofitConvertorVersion",
+                retrofitLogging            : "com.squareup.okhttp3:logging-interceptor:$okhttpVersion",
+
+
+                rxAndroid                  : "io.reactivex.rxjava2:rxandroid:$rxandroidVersion",
+                rxJava                     : "io.reactivex.rxjava2:rxjava:$rxJavaVersion",
+                rxBinding                  : "com.jakewharton.rxbinding2:rxbinding:$rxBindingVersion",
+
+                dagger                     : "com.google.dagger:dagger:$daggerVersion",
+                daggerCompiler             : "com.google.dagger:dagger-compiler:$daggerVersion",
+
+                glide                      : "com.github.bumptech.glide:glide:$glideVersion",
+
+                parcelerApi                : "org.parceler:parceler-api:$parcelerApiVersion",
+                parceler                   : "org.parceler:parceler:$parcelerApiVersion",
+                easypermissions            : 'pub.devrel:easypermissions:3.0.0',
+
+                butterknife                : "com.jakewharton:butterknife:$butterknifeVersion",
+                butterknifecompiler        : "com.jakewharton:butterknife-compiler:$butterknifeVersion",
+
+                timber                     : 'com.jakewharton.timber:timber:4.6.1',
+                mockitotest                : "org.mockito:mockito-core:$mockitoVersion",
+                mockitotestAndroid         : "org.mockito:mockito-android:$mockitoVersion",
+                robolectric                : 'org.robolectric:robolectric:4.0-alpha-3-SNAPSHOT',
+                powermock_core             : "org.powermock:powermock-core:$powerMockVersion",
+                powermock_junit            : "org.powermock:powermock-module-junit4:$powerMockVersion",
+                powermock_junit_rule       : "org.powermock:powermock-module-junit4-rule:$powerMockVersion",
+                powermock_mockito          : "org.powermock:powermock-api-mockito2:$powerMockVersion",
+                powermock_xstream          : "org.powermock:powermock-classloading-xstream:$powerMockVersion",
+                roboelectric_shadow_support: "org.robolectric:shadows-support-v4:3.4-rc1"
+        ]
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

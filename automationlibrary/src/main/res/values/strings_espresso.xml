@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *******************************************************************************
+  ~ Copyright (c) 2019 or the year of first publication, if earlier, HighQ Solutions Limited or its licensors
+  ~ *******************************************************************************
+  -->
+
+<resources>
+
+    <!--Id's for webview login page(for application)-->
+    <string name="loginEmailId">LoginEmail</string>
+    <string name="loginPassword">LoginPassword</string>
+
+    <!--Id's for webview login page(for collaborate)-->
+    <string name="loginEmailColl">Login_email</string>
+    <string name="loginPasswordColl">Login_password</string>
+
+
+    <string name="login_">Log in</string>
+    <string name="allow">Allow</string>
+    <string name="decline">Decline</string>
+
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="timout_ui_automator">60000</integer>
+    <integer name="wait_time_1_minute">60000</integer>
+
+</resources>

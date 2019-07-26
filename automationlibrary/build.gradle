@@ -1,0 +1,59 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.0"
+
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //implementation 'androidx.appcompat:appcompat:1.0.2'
+    Map<String, String> dependencies = rootProject.ext.dependencies
+    implementation dependencies.timber
+    implementation dependencies.recyclerView
+
+    testImplementation 'junit:junit:4.12'
+//    androidTestImplementation 'androidx.test:runner:1.2.0'
+    //   androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // Testing-only dependencies
+    implementation 'androidx.test:core:' + rootProject.coreVersion
+    //  implementation 'androidx.test.ext:junit:' + rootProject.extJUnitVersion
+
+    implementation 'androidx.test:runner:' + rootProject.runnerVersion;
+    //  implementation 'androidx.test:rules:' + rootProject.rulesVersion
+    implementation 'androidx.test.espresso:espresso-core:' + rootProject.espressoVersion
+    implementation 'androidx.test.espresso:espresso-web:' + rootProject.espressoVersion
+    implementation 'androidx.test.espresso:espresso-contrib:' + rootProject.espressoVersion
+    implementation 'androidx.test.espresso:espresso-intents:' + rootProject.espressoVersion
+
+    // UiAutomator Testing
+    implementation 'androidx.test.uiautomator:uiautomator:' + rootProject.uiautomatorVersion
+    implementation 'androidx.test.espresso:espresso-idling-resource:' + rootProject.idlingResource
+    //  api 'com.google.guava:guava:27.1-android'
+    implementation 'org.jsoup:jsoup:' + rootProject.jsoupVersion
+
+    implementation 'com.sun.mail:android-mail:1.6.2'
+    implementation 'com.sun.mail:android-activation:1.6.2'
+
+}
